@@ -372,7 +372,7 @@ namespace nvrhi
     typedef uint32_t MipLevel;
     typedef uint32_t ArraySlice;
 
-    /// Flags apply to resouces that need to be shared with other graphics APIs or other GPU devices when allocation.
+    /// Flags apply to resources that need to be shared with other graphics APIs or other GPU devices when allocation.
     enum class SharedResourceFlags : uint32_t
     {
         None                = 0,
@@ -401,7 +401,7 @@ namespace nvrhi
         bool isTypeless = false;
         bool isShadingRateSurface = false;
 
-        SharedResourceFlags sharedResouceFlags = SharedResourceFlags::None;
+        SharedResourceFlags sharedResourceFlags = SharedResourceFlags::None;
 
         // Indicates that the texture is created with no backing memory,
         // and memory is bound to the texture later using bindTextureMemory.
@@ -595,7 +595,7 @@ namespace nvrhi
 
         CpuAccessMode cpuAccess = CpuAccessMode::None;
 
-        SharedResourceFlags sharedResouceFlags = SharedResourceFlags::None;
+        SharedResourceFlags sharedResourceFlags = SharedResourceFlags::None;
 
         constexpr BufferDesc& setByteSize(uint64_t value) { byteSize = value; return *this; }
         constexpr BufferDesc& setStructStride(uint32_t value) { structStride = value; return *this; }
